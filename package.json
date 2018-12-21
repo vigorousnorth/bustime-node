@@ -1,0 +1,14 @@
+{
+  "name": "bustime_portland",
+  "version": "1.0.0",
+  "description": "Scraping real-time bus data from Greater Portland Metro Bus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bustime": "^0.6.10"
+  }
+}

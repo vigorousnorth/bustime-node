@@ -1,0 +1,136 @@
+ul#zoombuttons {
+	font-family: 'Open Sans', sans-serif; 
+	list-style-type: none; 
+	position: absolute; 
+	right: 10px; top: 0em; 
+	width: 90px;
+}
+
+.svgButton {  
+		height: auto; width: 90px; padding: 0.2em; margin-bottom: 2px;
+		cursor: pointer; 
+		text-align: center;
+		border-left: 4px solid rgba(200,0,0, 0.5);
+		background-color: rgb(250,20,20); color: #fff;}
+.svgButton:hover {
+		border-left: 4px solid rgb(255,100,100);
+	}
+.svgButton.off { display: none; }
+
+svg { font-family: 'Open Sans', sans-serif; }
+
+#key svg {font-size: 11px;}
+#key svg text.title {font-size: 12px; font-weight: 600;}
+#key svg text.subtitle {font-size: 10px;}
+
+#barChart svg text {font-size: 12px;}
+#barChart g.tick text {font-size: 11px;}
+#barChart g.tick line {}
+text.underconstruction {font-style: italic;}
+
+g.grid line {
+  stroke: lightgrey;
+  stroke-width: 1;
+  /*shape-rendering: crispEdges;*/
+}
+
+g.grid path {
+  stroke-width: 0;
+}
+
+#mainemap { position: relative; width: 100%; 
+	padding: 4em 0 0.1em 0; }
+
+.counties { fill: rgba(250,250,250,1); pointer-events: none; stroke: #bbb; }
+.bcBold { font-weight: 700; }
+
+#iaAnno { text-align: right; font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 13px; padding: 7px 0 15px 0; letter-spacing: -.5px; }
+
+.mapClear { clear: both; }
+
+path.domain {display: none;}
+
+.svgKeyBox { text-align: right; font-size: 14px; line-height: 14px; font-weight: 300; padding: 10px 15px 0px 0px; letter-spacing: -.5px;}
+
+#svgClick h3, .ui-widget h2 { font-family: 'Open Sans', sans-serif; font-weight: 700; color: rgb(0,0,0); font-size: 18px; text-align: left; border-top: solid 1px rgb(235,235,235); border-bottom: solid 1px rgb(235,235,235); margin: 0 0 5px 0; padding: 10px 15px 7px 0; text-transform: capitalize; }
+#svgClick { padding-top: 15px;  text-align: right; }
+#svgClickText { padding-right: 10px; }
+
+
+#svgChatBloc { padding: 10px 0 0 20px; }
+
+circle.str { stroke-width: 0.5px; stroke: red; fill-opacity: 0.5; cursor: pointer; stroke-linejoin: round; stroke-linecap: round;}
+
+circle.project.hidden { visibility: hidden; }
+
+circle.project.visible { visibility: visible; }
+
+
+.map {
+  position: relative;
+  overflow: hidden;
+}
+
+.map svg text {pointer-events: none;}
+
+rect.construction {stroke-width: 1px; stroke-dasharray: 1, 3;; stroke: #222; opacity: 0.5;}
+
+path.svgTown { stroke: #ddd; stroke-dasharray: 4,4; }
+path.blockGroup {stroke: #aaa;  stroke-dasharray: 2,2; stroke-width: 1;}
+
+path.street_label_path {stroke: none; fill: none;}
+
+path.park, path.golf_course, path.grave_yard {fill: #a1d99b; stroke: none;}
+
+path.road {fill: none; stroke-width: 0.5px; stroke: #000; }
+path.motorway, path.motorway_link {stroke: #b10026;}
+text.neighborhood_label {text-anchor: middle; text-transform: uppercase; font-style: italic; font-size: 12px; fill: #888; letter-spacing: 2px;}
+
+text.street_label {text-anchor: middle; font-size: 10px; }
+
+text.zoomedIn {font-size: 6px;}
+
+div#key {height: 80px; width: 100%;}
+
+#projectinfo {
+	height: 2em; position: relative; top: 0em; width: 100%; 
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.8em;  
+}
+
+p#splain { width: 60%; margin: 0.2em 0;}
+
+svg text.yearTitle {font-size: 22px; font-weight: 800;}
+
+#projectinfo img {
+	max-width: 420px; width: 60%; 
+	display: inline-block; margin: 0 1em 0 0;
+	vertical-align: middle;
+}	
+#projectinfo div#rightblock {
+	width: 80%; 
+	display: inline-block; vertical-align: middle;
+	margin: 0 1em;
+}
+
+#projectinfo img.hidden {display: none;}
+
+/* ######## MOBILE ONLY ######## */
+
+@media screen and (min-width: 645px) and (max-width: 800px) {
+	text.neighborhood_label {font-size: 9px; }
+	text.street_label {font-size: 8px; }
+}
+
+@media screen and (max-width: 644px) {
+	body { font-size: 11px; }
+	ul#zoombuttons, .svgButton {width: 70px; font-size: 10px; }
+	div#key svg {font-size: 8px;}
+	svg { width: 100%; }
+	#projectinfo { top: 0em; font-size: 12px; line-height: 16px;}
+	p.units, p.notes {font-size: 11px;}
+	#mainemap {padding-top: 8em;}
+	text.neighborhood_label {text-anchor: middle; font-style: italic; font-size: 8px; }
+	text.street_label {display: none; }
+
+}
